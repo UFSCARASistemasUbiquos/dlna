@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : RequisicaoServiceBrocker.xml
+    Created on : 23 de Setembro de 2014, 16:51
+    Author     : elder
+    Description:
+        Purpose of the document follows.
+-->
+
+<RequisicaoServiceBrocker> 
+    <DeviceTarget>
+    UUID 
+    </DeviceTarget>
+ 
+    <DeviceName>
+    NomeDispositivo
+    </DeviceName>
+ 
+    <ServiceName>
+    NomeServico
+    </ServiceName>
+ 
+    <ArgumentosInput>
+        <NomeArgumento>
+        Nome
+        </NomeArgumento>
+        <TipoArgumento>
+        Tipo
+        </TipoArgumento>
+        <ValorArgumento>
+        Valor
+        </ValorArgumento>        
+    </ArgumentosInput>
+ 
+    <ArgumentosOutput>
+        <NomeArgumento>
+        Nome
+        </NomeArgumento>
+        <TipoArgumento>
+        Tipo
+        </TipoArgumento>
+        <ValorArgumento>
+        Valor
+        </ValorArgumento>
+    </ArgumentosOutput>
+    
+    <Escalonamento>
+        <Prioridade>
+        Prioridade(1...9)
+        </Prioridade>
+        <TipoEscalonamento>
+        MK/Soft
+        </TipoEscalonamento>
+        <M>
+        M    
+        </M>
+        <K>
+        K    
+        </K>
+        <Deadline>
+        Deadline(ms)
+        </Deadline>
+    </Escalonamento>
+</RequisicaoServiceBrocker>

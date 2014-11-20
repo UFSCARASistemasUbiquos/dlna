@@ -15,6 +15,11 @@ import org.teleal.cling.model.types.*;
 
 class CallbackServer implements Runnable
 {
+    String identification;
+    public CallbackServer(String clientName)
+    {
+        identification = clientName;
+    }
 
     @Override
     public void run()
@@ -34,7 +39,7 @@ class CallbackServer implements Runnable
                 }
             });
             LocalDevice ld = createDevice();
-            
+
             // Add the bound local device to the registry
             upnpService.getRegistry().addDevice(ld);
 
@@ -58,7 +63,7 @@ class CallbackServer implements Runnable
                 UDN.uniqueSystemIdentifier("Callback Service"));
 
         DeviceType type =
-                new UDADeviceType("Callback", 1);
+                new UDADeviceType("Callback" + identification, 1);
 
         DeviceDetails details =
                 new DeviceDetails(

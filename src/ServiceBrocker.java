@@ -37,30 +37,4 @@ public class ServiceBrocker
     {
         new Thread(new SBT(entradaXml)).start();        
     }
-    /*@UpnpAction(out =
-    @UpnpOutputArgument(name = "ResultWrapped", stateVariable="service"))
-    public String getWrapped()
-    {
-        System.out.println("Entrou na acao retrieve");
-        b.busca();
-        
-        service = "teste";//b.retorno;
-        return service;
-    }
-    
-    @UpnpAction(name = "GetService",
-    out =
-    @UpnpOutputArgument(name = "ResultService",
-    getterName = "getWrapped"))
-    public void getService(@UpnpInputArgument(name = "EntradaXml") String entradaXml) throws JDOMException, IOException
-    {
-
-        b = new Buscador(entradaXml, "teste");
-        //b.busca();
-
-        //while(!b.terminou);
-        System.out.println("Fim da acao get");
-
-    }*/
-
 }

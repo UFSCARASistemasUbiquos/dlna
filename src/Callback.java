@@ -16,7 +16,7 @@ serviceType =
 @UpnpServiceType(value = "Callback", version = 1))
 public class Callback
 {
-
+    
     @UpnpStateVariable(defaultValue = "vazio")
     private String retorno;
 
@@ -30,8 +30,8 @@ public class Callback
     @UpnpAction
     public void setRetorno(@UpnpInputArgument(name = "EntradaXml") String entradaXml)
     {
-        
         retorno = entradaXml;
-        System.out.println("Setou callback, retorno: " + retorno);
+        if(retorno != null)
+            System.out.println("Setou callback, retorno: " + retorno);
     }
 }
